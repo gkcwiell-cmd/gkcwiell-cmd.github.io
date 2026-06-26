@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pet Products Manufacturer | Factory Direct FOB Ningbo</title>
+<meta name="description" content="Direct pet products manufacturer in China. Dog toys, cat toys, slow feeders, grooming tools — factory prices, FOB Ningbo. OEM/ODM welcome.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#212529;line-height:1.6}
+:root{--green:#2D3C32;--light:#f5f5f5;--gold:#BDB66A;--gray:#828282;--white:#fff}
+
+/* Nav */
+nav{position:fixed;top:0;width:100%;background:var(--white);z-index:100;border-bottom:1px solid #e0e0e0;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:60px}
+nav .logo{font-weight:700;font-size:18px;color:var(--green)}
+nav a{color:var(--green);text-decoration:none;margin-left:24px;font-size:14px;font-weight:500}
+nav a:hover{color:#000}
+
+/* Hero */
+.hero{background:var(--green);color:var(--white);text-align:center;padding:120px 24px 80px}
+.hero h1{font-size:40px;font-weight:800;margin-bottom:12px;letter-spacing:-1px}
+.hero p{font-size:18px;opacity:.85;max-width:600px;margin:0 auto 24px}
+.hero .badges{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.hero .badge{background:rgba(255,255,255,.15);padding:8px 20px;border-radius:24px;font-size:13px;font-weight:500}
+
+/* Section */
+.section{padding:80px 24px;max-width:1200px;margin:0 auto}
+.section h2{font-size:30px;color:var(--green);text-align:center;margin-bottom:16px}
+.section .sub{text-align:center;color:var(--gray);margin-bottom:48px;font-size:15px}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+.about-card{background:var(--light);padding:32px;border-radius:8px;text-align:center}
+.about-card .icon{font-size:32px;margin-bottom:12px}
+.about-card h3{font-size:16px;color:var(--green);margin-bottom:8px}
+.about-card p{font-size:14px;color:var(--gray)}
+
+/* Factory intro */
+.factory-intro{max-width:720px;margin:48px auto 0;text-align:center;font-size:15px;color:#444;line-height:1.8}
+.factory-intro strong{color:var(--green)}
+
+/* Products */
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.product-card{background:var(--white);border:1px solid #e0e0e0;border-radius:8px;overflow:hidden;transition:box-shadow .2s}
+.product-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.product-card img{width:100%;aspect-ratio:1;object-fit:cover;border-bottom:3px solid var(--gold)}
+.product-card .info{padding:12px}
+.product-card .info .cat{font-size:10px;color:var(--green);text-transform:uppercase;font-weight:600;margin-bottom:2px}
+.product-card .info h3{font-size:13px;margin-bottom:2px;color:#212529}
+.product-card .info .cn{font-size:11px;color:var(--gray);margin-bottom:4px}
+.product-card .info .desc{font-size:10.5px;color:#aaa;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+/* Modal */
+.modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:200;justify-content:center;align-items:center;padding:24px}
+.modal-overlay.active{display:flex}
+.modal{background:var(--white);border-radius:12px;max-width:720px;width:100%;max-height:90vh;overflow-y:auto;position:relative}
+.modal .close{position:absolute;top:12px;right:16px;font-size:28px;cursor:pointer;color:var(--gray);z-index:10;line-height:1}
+.modal .close:hover{color:#000}
+.modal .img-main{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px 12px 0 0}
+.modal .body{padding:24px}
+.modal .body .m-cat{font-size:12px;color:var(--green);text-transform:uppercase;font-weight:700;margin-bottom:4px}
+.modal .body .m-en{font-size:22px;font-weight:700;margin-bottom:4px;color:#212529}
+.modal .body .m-cn{font-size:14px;color:var(--gray);margin-bottom:16px}
+.modal .body .m-desc{font-size:14px;color:#444;line-height:1.7;margin-bottom:20px}
+.modal .specs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.modal .spec{background:var(--light);padding:12px 16px;border-radius:6px}
+.modal .spec .s-label{font-size:11px;color:var(--gray);text-transform:uppercase}
+.modal .spec .s-val{font-size:14px;font-weight:600;color:#212529}
+.modal .m-gallery{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.modal .m-gallery .thumb{width:80px;height:80px;object-fit:cover;border-radius:6px;border:2px solid #e0e0e0;cursor:pointer}
+.modal .m-gallery .thumb:hover,.modal .m-gallery .thumb.active{border-color:var(--green)}
+.modal .m-note{font-size:12px;color:var(--gray);font-style:italic;margin-top:12px}
+
+@media(max-width:768px){
+  .modal .specs{grid-template-columns:1fr}
+}
+
+/* CTA */
+.cta{background:var(--green);color:var(--white);text-align:center;padding:80px 24px}
+.cta h2{font-size:30px;margin-bottom:12px;color:var(--white)}
+.cta p{font-size:16px;opacity:.85;margin-bottom:24px}
+.cta .contact-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta .btn{display:inline-block;padding:14px 32px;border-radius:6px;font-weight:600;font-size:15px;text-decoration:none}
+.cta .btn-wa{background:#25D366;color:#fff}
+.cta .btn-email{background:var(--white);color:var(--green)}
+
+/* Footer */
+footer{background:#1a1a1a;color:#999;text-align:center;padding:32px 24px;font-size:13px}
+footer span{color:var(--gold)}
+
+@media(max-width:768px){
+  .hero h1{font-size:28px}
+  nav a{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Momi & Co.</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Factory-Direct Pet Products</h1>
+  <p>We manufacture. You profit. No middlemen — just quality pet toys, bowls, and grooming tools shipped FOB Ningbo.</p>
+  <div class="badges">
+    <span class="badge">🇨🇳 Yiwu, China</span>
+    <span class="badge">🚢 FOB Ningbo/Shanghai</span>
+    <span class="badge">🏭 Factory Direct</span>
+    <span class="badge">🎨 OEM/ODM</span>
+    <span class="badge">✅ Small MOQ</span>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <h2>About Our Factory</h2>
+  <p class="sub">Not a trading company — the actual source</p>
+  <div class="about-grid">
+    <div class="about-card">
+      <div class="icon">🏭</div>
+      <h3>In-House Production</h3>
+      <p>Every product made in our own Yiwu facility — from raw material to finished goods</p>
+    </div>
+    <div class="about-card">
+      <div class="icon">🔍</div>
+      <h3>3-Step QC</h3>
+      <p>Material check, production check, final check — defect rate under 0.5%</p>
+    </div>
+    <div class="about-card">
+      <div class="icon">🎨</div>
+      <h3>OEM / ODM Ready</h3>
+      <p>Your brand, your colors, your packaging. Small MOQ to start</p>
+    </div>
+    <div class="about-card">
+      <div class="icon">🌍</div>
+      <h3>Global Export</h3>
+      <p>Serving 20+ countries across North America, Europe, and Asia</p>
+    </div>
+  </div>
+  <div class="factory-intro">
+    <strong>We are a specialized pet products manufacturer based in Yiwu, China — not a trading company.</strong> Every product you see here is made in our own facility, from raw material to finished goods. With years of export experience, we serve distributors, brands, and retailers worldwide. <strong>Factory-direct pricing. Consistent quality. Flexible OEM/ODM. That's the advantage of working directly with the source.</strong>
+  </div>
+</section>
+
+<section class="section" id="products">
+  <h2>Our Products</h2>
+  <p class="sub">24 SKUs across 6 categories — all available for immediate order</p>
+  <div class="products-grid" id="productGrid"></div>
+</section>
+
+<!-- Product Detail Modal -->
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="img-main" id="modalImg" src="" alt="">
+    <div class="body">
+      <div class="m-cat" id="modalCat"></div>
+      <div class="m-en" id="modalEN"></div>
+      <div class="m-cn" id="modalCN"></div>
+      <div class="m-desc" id="modalDesc"></div>
+      <div class="specs">
+        <div class="spec"><div class="s-label">Material</div><div class="s-val" id="modalMat"></div></div>
+        <div class="spec"><div class="s-label">Size</div><div class="s-val" id="modalSize"></div></div>
+        <div class="spec"><div class="s-label">MOQ</div><div class="s-val" id="modalMOQ"></div></div>
+        <div class="spec"><div class="s-label">FOB Port</div><div class="s-val">Ningbo / Shanghai</div></div>
+      </div>
+      <div class="m-gallery" id="modalGallery"></div>
+      <div class="m-note">📷 More product photos available on request — contact us on WhatsApp for the full gallery.</div>
+    </div>
+  </div>
+</div>
+
+<section class="cta" id="contact">
+  <h2>Ready to Source?</h2>
+  <p>Send us an inquiry — we'll reply with a quote within 24 hours.</p>
+  <div class="contact-links">
+    <a href="#" class="btn btn-wa" id="waLink">💬 WhatsApp</a>
+    <a href="https://instagram.com/willow08272023" class="btn btn-email" style="background:#E1306C;color:#fff">📷 Instagram</a>
+    <a href="#" class="btn btn-email" id="emailLink">✉️ Email Us</a>
+  </div>
+</section>
+
+<footer>
+  <p><span>Momi & Co.</span> &copy; 2026 &nbsp;|&nbsp; WhatsApp: +44 7880 237719 &nbsp;|&nbsp; willow08272023@outlook.com &nbsp;|&nbsp; Instagram: @willow08272023</p>
+  <p style="margin-top:8px">FOB Ningbo / Shanghai &nbsp;|&nbsp; T/T 30/70 &nbsp;|&nbsp; OEM/ODM Welcome</p>
+</footer>
+
+<script>
+// Product data with full specs
+const products = [
+  {file:"毛绒小黄鸭耐咬磨牙解闷宠物玩具.jpg",en:"Plush Duckling Squeaky Dog Toy",cn:"毛绒小黄鸭耐咬磨牙解闷宠物玩具",cat:"Plush Dog Toys",desc:"Soft plush duckling with built-in squeaker. Reinforced double-stitched seams. Ideal for light to moderate chewers. Compact size for small-to-medium dogs. Machine washable.",mat:"Plush + PP Cotton + Squeaker",size:"Approx. 20×12cm",moq:"1000 pcs"},
+  {file:"毛绒小象耐咬磨牙解闷宠物玩具.jpg",en:"Plush Elephant Squeaky Dog Toy",cn:"毛绒小象耐咬磨牙解闷宠物玩具",cat:"Plush Dog Toys",desc:"Soft plush elephant with built-in squeaker for interactive play. Crinkle ears add extra sensory stimulation. Durable stitching for tossing and tugging.",mat:"Plush + PP Cotton + Squeaker + Crinkle Paper",size:"Approx. 22×15cm",moq:"1000 pcs"},
+  {file:"毛绒狮子耐咬磨牙解闷宠物玩具.jpg",en:"Plush Lion Squeaky Dog Toy",cn:"毛绒狮子耐咬磨牙解闷宠物玩具",cat:"Plush Dog Toys",desc:"Plush lion with squeaker and textured mane. Embroidered facial features — no plastic parts. Durable bite-resistant stitching throughout.",mat:"Plush + PP Cotton + Squeaker",size:"Approx. 22×15cm",moq:"1000 pcs"},
+  {file:"毛绒狼耐咬磨牙解闷宠物玩具.jpg",en:"Plush Wolf Squeaky Dog Toy",cn:"毛绒狼耐咬磨牙解闷宠物玩具",cat:"Plush Dog Toys",desc:"Realistic plush wolf design with internal squeaker. Soft yet durable fabric withstands daily play. Great for fetch, tug, and cuddle. Machine washable.",mat:"Plush + PP Cotton + Squeaker",size:"Approx. 28×14cm",moq:"1000 pcs"},
+  {file:"ETPU高回弹狗狗耐咬.jpg",en:"ETPU High-Rebound Chew Toy",cn:"ETPU高回弹狗狗耐咬",cat:"Rubber Chew Toys",desc:"Made from expanded TPU foam with exceptional rebound elasticity. Ultra-durable for aggressive chewers. Non-toxic, odorless, BPA-free. Floats on water for pool and beach play.",mat:"ETPU (Expanded TPU)",size:"Ø7cm, various shapes",moq:"1000 pcs"},
+  {file:"TPR水波球狗玩具.jpg",en:"TPR Wave-Texture Chew Ball",cn:"TPR水波球狗玩具",cat:"Rubber Chew Toys",desc:"TPR ball with ripple wave surface texture. Erratic bounce keeps dogs engaged during fetch. Textured surface cleans teeth and massages gums. Durable one-piece molding.",mat:"TPR (Thermoplastic Rubber)",size:"Ø6cm",moq:"1000 pcs"},
+  {file:"披萨华夫饼耐咬磨牙洁齿狗狗啃咬玩具.jpg",en:"Pizza & Waffle Rubber Chew Toy",cn:"披萨华夫饼耐咬磨牙洁齿狗狗啃咬玩具",cat:"Rubber Chew Toys",desc:"Food-themed rubber chew toys shaped like pizza slices and waffles. Raised texture details clean teeth during chewing. Erratic roll pattern triggers chase instinct. Novelty design with strong shelf appeal.",mat:"TPR / Natural Rubber",size:"Approx. 12×8cm",moq:"1000 pcs"},
+  {file:"搪胶仿真花生宠物狗玩具.jpg",en:"Realistic Peanut Rubber Dog Toy",cn:"搪胶仿真花生宠物狗玩具",cat:"Rubber Chew Toys",desc:"Lifelike peanut-shaped rubber chew toy with textured shell surface. Hollow center for treat dispensing. Squeaker inside for added engagement. Food-grade TPR material.",mat:"Food-grade TPR",size:"Approx. 10×5cm",moq:"1000 pcs"},
+  {file:"橄榄TPR磨牙耐咬狗狗玩具.jpg",en:"TPR Olive-Shape Dental Chew Toy",cn:"橄榄TPR磨牙耐咬狗狗玩具",cat:"Rubber Chew Toys",desc:"Olive-shaped TPR chew toy with ribbed surface for teeth cleaning. Erratic roll and bounce for engaging fetch. Built-in squeaker. Durable one-piece construction.",mat:"TPR (Thermoplastic Rubber)",size:"Approx. 8×5cm",moq:"1000 pcs"},
+  {file:"耐咬TPR发声橄榄球.jpg",en:"TPR Squeaky Rugby Ball Dog Toy",cn:"耐咬TPR发声橄榄球",cat:"Rubber Chew Toys",desc:"Rugby ball shaped TPR toy with raised grip texture and internal squeaker. Erratic bounce pattern for exciting fetch. Ribbed surface massages gums during chewing.",mat:"TPR (Thermoplastic Rubber)",size:"11.5×6×6cm, 60g",moq:"1000 pcs"},
+  {file:"辣椒漏食球TRP狗玩具.jpg",en:"Chili-Shape Treat Dispensing Dog Toy",cn:"辣椒漏食球TRP狗玩具",cat:"Rubber Chew Toys",desc:"Chili pepper shaped TPR treat-dispensing toy. Fill with kibble — dog rolls it to release food. Combines slow feeding with mental stimulation. Textured surface cleans teeth.",mat:"TPR (Thermoplastic Rubber)",size:"Approx. 12×5cm",moq:"1000 pcs"},
+  {file:"骨头形状橄榄TPR磨牙耐咬狗狗玩具.jpg",en:"TPR Bone-Shape Dental Chew Toy",cn:"骨头形状橄榄TPR磨牙耐咬狗狗玩具",cat:"Rubber Chew Toys",desc:"Bone-shaped TPR chew toy with olive-textured surface. Ribbed and knobbed texture cleans teeth from all angles. Built-in squeaker. Classic bone shape dogs instinctively love.",mat:"TPR (Thermoplastic Rubber)",size:"Approx. 13×6cm",moq:"1000 pcs"},
+  {file:"折叠狗盆户外喝水喂食碗.jpg",en:"Collapsible Travel Silicone Dog Bowl",cn:"折叠狗盆户外喝水喂食碗",cat:"Bowls & Feeders",desc:"Portable silicone travel bowl that collapses flat for storage. Expands to full capacity for food or water. Carabiner clip for attaching to backpack or leash. Food-grade silicone.",mat:"Food-grade Silicone + Metal Carabiner",size:"Ø15cm expanded, 500ml",moq:"1000 pcs"},
+  {file:"狗狗猫咪高脚护颈宠物碗.jpg",en:"Elevated Ergonomic Neck-Relief Pet Bowl",cn:"狗狗猫咪高脚护颈宠物碗",cat:"Bowls & Feeders",desc:"Dual-bowl elevated feeding stand for cats and dogs. Tilted design reduces neck strain and improves swallowing. Removable bowls for easy cleaning. Wide non-slip base.",mat:"ABS Stand + BPA-free Bowls",size:"Stand approx. 35×18cm, 350ml",moq:"1000 pcs"},
+  {file:"科学喂养防噎宠物慢食碗.jpg",en:"Anti-Choke Scientific Slow Feeder Bowl",cn:"科学喂养防噎宠物慢食碗",cat:"Bowls & Feeders",desc:"Maze-pattern slow feeder bowl designed to extend meal time 5-10x. Segmented ridges prevent gulping and reduce bloat risk. Non-slip base keeps bowl stable on all floor types.",mat:"ABS + TPE, Food-grade",size:"Ø25×6cm, 500ml",moq:"1000 pcs"},
+  {file:"防噎慢食碗.jpg",en:"Anti-Choke Slow Feeder Bowl",cn:"防噎慢食碗",cat:"Bowls & Feeders",desc:"Round slow feeder bowl with raised center obstacle design. Forces dogs to eat around barriers — prevents choking and regurgitation. Non-slip silicone base. Dishwasher safe.",mat:"ABS + Silicone Base, Food-grade",size:"Ø25×6cm, 500ml",moq:"1000 pcs"},
+  {file:"三球猫薄荷球猫咪玩具.jpg",en:"3-Ball Catnip Spinner Cat Toy",cn:"三球猫薄荷球猫咪玩具",cat:"Cat Toys",desc:"Three spinning balls filled with organic catnip on a durable base. Cats bat the balls to release scent. Interactive design keeps indoor cats active and engaged. Refillable catnip balls.",mat:"ABS Base + Catnip-filled Balls",size:"Base approx. 18×8cm",moq:"1000 pcs"},
+  {file:"墙角蹭痒器 挠痒痒猫抓板玩具.jpg",en:"Corner-Mount Cat Self-Groomer Scratcher",cn:"墙角蹭痒器 挠痒痒猫抓板玩具",cat:"Cat Products",desc:"Wall-mounted corner scratching and grooming pad. Self-adhesive backing — no drilling required. Replaceable brush pads. Catnip compartment attracts cats to use regularly.",mat:"ABS + Nylon Bristles",size:"18×7×5cm",moq:"1000 pcs"},
+  {file:"猫薄荷球猫咪玩具.jpg",en:"Catnip Ball Cat Toy Set",cn:"猫薄荷球猫咪玩具",cat:"Cat Toys",desc:"Assorted catnip-filled ball toys with multiple textures. Includes avocado, cat paw, and fruit designs. Organic catnip filling. Crinkle and rattle sounds for multi-sensory stimulation.",mat:"Plush + Organic Catnip + Crinkle Paper",size:"Ø5-8cm, assorted designs",moq:"1000 pcs"},
+  {file:"双面开结梳.jpg",en:"Double-Sided Detangling Pet Comb",cn:"双面开结梳",cat:"Grooming",desc:"Two-in-one grooming comb — one side with wide teeth for detangling mats, the other with fine teeth for smoothing. Ergonomic handle for comfortable grip. Suitable for all coat types.",mat:"Stainless Steel + ABS Handle",size:"Large, approx. 18×7cm",moq:"1000 pcs"},
+  {file:"喷雾按摩梳蒸汽.jpg",en:"Steam Spray Massage Pet Brush",cn:"喷雾按摩梳蒸汽",cat:"Grooming",desc:"Innovative pet grooming brush with built-in water spray mister. Releases fine steam/mist while brushing to hydrate coat and reduce static. Soft silicone bristles massage skin during grooming.",mat:"ABS + Silicone Bristles + Spray Mechanism",size:"Approx. 15×8cm",moq:"1000 pcs"},
+  {file:"开结去浮毛神器猫梳子.jpg",en:"De-Shedding & Detangling Cat Comb",cn:"开结去浮毛神器猫梳子",cat:"Grooming",desc:"Professional cat grooming comb designed to remove loose undercoat fur and detangle mats without pulling. Fine stainless steel teeth penetrate deep without scratching skin. Ergonomic non-slip handle.",mat:"Stainless Steel + TPR Handle",size:"Approx. 16×6cm",moq:"1000 pcs"},
+  {file:"可降解拾便袋分配器.jpg",en:"Biodegradable Poop Bag Dispenser",cn:"可降解拾便袋分配器",cat:"Accessories",desc:"Portable poop bag dispenser with biodegradable waste bags included. Compact cylinder design attaches to leash. Easy-tear opening for quick access. Eco-friendly material.",mat:"ABS + Biodegradable PE Bags",size:"Ø5×10cm",moq:"1000 pcs"},
+  {file:"带拉链封口便携宠物零食袋.jpg",en:"Zippered Portable Pet Treat Pouch",cn:"带拉链封口便携宠物零食袋",cat:"Accessories",desc:"Nylon treat pouch with secure zipper closure and paw-print design. Belt clip for hands-free carry during training and walks. Water-resistant fabric. Compact yet spacious interior.",mat:"Nylon + Metal Zipper + Belt Clip",size:"Approx. 10×8cm, ~200ml",moq:"1000 pcs"},
+];
+
+const grid = document.getElementById('productGrid');
+products.forEach((p,i) => {
+  const card = document.createElement('div');
+  card.className = 'product-card';
+  card.style.cursor = 'pointer';
+  card.onclick = () => openModal(i);
+  card.innerHTML = `
+    <img src="images/${p.file}" alt="${p.en}" loading="lazy">
+    <div class="info">
+      <div class="cat">${p.cat}</div>
+      <h3>${p.en}</h3>
+      <div class="cn">${p.cn}</div>
+      <div class="desc">${p.desc}</div>
+    </div>`;
+  grid.appendChild(card);
+});
+
+// Modal
+function openModal(i){
+  const p = products[i];
+  document.getElementById('modalImg').src = 'images/large/' + p.file;
+  document.getElementById('modalCat').textContent = p.cat;
+  document.getElementById('modalEN').textContent = p.en;
+  document.getElementById('modalCN').textContent = p.cn;
+  document.getElementById('modalDesc').textContent = p.desc;
+  document.getElementById('modalMat').textContent = p.mat;
+  document.getElementById('modalSize').textContent = p.size;
+  document.getElementById('modalMOQ').textContent = p.moq;
+  // Gallery: main image as thumbnail for now — add more images here later
+  const gallery = document.getElementById('modalGallery');
+  gallery.innerHTML = `<img class="thumb active" src="images/large/${p.file}" alt="" onclick="document.getElementById('modalImg').src=this.src">`;
+  document.getElementById('modalOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(){
+  document.getElementById('modalOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
+
+// Contact links
+document.getElementById('waLink').href = 'https://wa.me/447880237719';
+document.getElementById('emailLink').href = 'mailto:willow08272023@outlook.com';
+</script>
+</body>
+</html>
