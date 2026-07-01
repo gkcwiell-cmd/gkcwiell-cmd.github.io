@@ -7,8 +7,8 @@
 <meta name="description" content="Direct pet products manufacturer in China. Dog toys, cat toys, slow feeders, grooming tools — factory prices, FOB Ningbo. OEM/ODM welcome.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#212529;line-height:1.6}
-:root{--green:#2D3C32;--light:#f5f5f5;--gold:#BDB66A;--gray:#828282;--white:#fff}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#212529;line-height:1.6;background:#fffdf9}
+:root{--green:#2D3C32;--light:#fff9f0;--gold:#BDB66A;--gray:#828282;--white:#fff;--peach:#f3d8c8;--sage:#dde8dd}
 
 /* Nav */
 nav{position:fixed;top:0;width:100%;background:var(--white);z-index:100;border-bottom:1px solid #e0e0e0;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:60px}
@@ -17,11 +17,15 @@ nav a{color:var(--green);text-decoration:none;margin-left:24px;font-size:14px;fo
 nav a:hover{color:#000}
 
 /* Hero */
-.hero{background:var(--green);color:var(--white);text-align:center;padding:120px 24px 80px}
+.hero{background:linear-gradient(145deg,#fff9f0 0%,#f6dfd1 100%);color:var(--green);text-align:center;padding:100px 24px 72px;position:relative;overflow:hidden}
+.hero:before,.hero:after{content:'🐾';position:absolute;font-size:72px;opacity:.07;transform:rotate(-18deg)}
+.hero:before{left:5%;top:18%}.hero:after{right:6%;bottom:12%;transform:rotate(18deg)}
 .hero h1{font-size:40px;font-weight:800;margin-bottom:12px;letter-spacing:-1px}
 .hero p{font-size:18px;opacity:.85;max-width:600px;margin:0 auto 24px}
 .hero .badges{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.hero .badge{background:rgba(255,255,255,.15);padding:8px 20px;border-radius:24px;font-size:13px;font-weight:500}
+.hero .badge{background:rgba(45,60,50,.09);padding:8px 20px;border-radius:24px;font-size:13px;font-weight:600}
+.hero-logo{height:190px;margin-bottom:8px;border-radius:22px;box-shadow:0 12px 30px rgba(45,60,50,.12)}
+.brand-pets{display:block;width:min(430px,92vw);max-height:500px;object-fit:cover;object-position:center 58%;margin:32px auto 0;border-radius:32px;box-shadow:0 18px 42px rgba(99,72,55,.18);border:8px solid rgba(255,255,255,.72)}
 
 /* Section */
 .section{padding:80px 24px;max-width:1200px;margin:0 auto}
@@ -30,7 +34,9 @@ nav a:hover{color:#000}
 
 /* About */
 .about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
-.about-card{background:var(--light);padding:32px;border-radius:8px;text-align:center}
+.about-card{background:var(--light);padding:32px;border-radius:18px;text-align:center;border:1px solid rgba(189,182,106,.18)}
+.about-card:nth-child(2n){background:var(--sage)}
+.about-card:nth-child(3n){background:var(--peach)}
 .about-card .icon{font-size:32px;margin-bottom:12px}
 .about-card h3{font-size:16px;color:var(--green);margin-bottom:8px}
 .about-card p{font-size:14px;color:var(--gray)}
@@ -41,8 +47,8 @@ nav a:hover{color:#000}
 
 /* Products */
 .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
-.product-card{background:var(--white);border:1px solid #e0e0e0;border-radius:8px;overflow:hidden;transition:box-shadow .2s}
-.product-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.product-card{background:var(--white);border:1px solid #eadfd4;border-radius:16px;overflow:hidden;transition:box-shadow .2s,transform .2s}
+.product-card:hover{box-shadow:0 10px 28px rgba(84,62,49,.12);transform:translateY(-3px)}
 .product-card img{width:100%;aspect-ratio:1;object-fit:cover;border-bottom:3px solid var(--gold)}
 .product-card .info{padding:12px}
 .product-card .info .cat{font-size:10px;color:var(--green);text-transform:uppercase;font-weight:600;margin-bottom:2px}
@@ -113,7 +119,7 @@ footer span{color:var(--gold)}
 </nav>
 
 <section class="hero">
-  <img src="logo.png?v=5" alt="Momi & Co." style="height:260px;margin-bottom:8px">
+  <img src="logo.png?v=5" alt="Momi & Co." class="hero-logo">
   <h1>Factory-Direct Pet Products</h1>
   <p>We manufacture. You profit. No middlemen — just quality pet toys, bowls, and grooming tools shipped FOB Ningbo.</p>
   <div class="badges">
@@ -123,6 +129,7 @@ footer span{color:var(--gold)}
     <span class="badge">🎨 OEM/ODM</span>
     <span class="badge">✅ Small MOQ</span>
   </div>
+  <img src="images/brand-pets.png" alt="Movie the cat and Miemie the dog" class="brand-pets">
 </section>
 
 <section class="section" id="about">
