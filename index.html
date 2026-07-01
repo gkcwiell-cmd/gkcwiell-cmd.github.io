@@ -49,6 +49,7 @@ nav a:hover{color:#000}
 .product-card .info h3{font-size:13px;margin-bottom:2px;color:#212529}
 .product-card .info .cn{font-size:11px;color:var(--gray);margin-bottom:4px}
 .product-card .info .desc{font-size:10.5px;color:#aaa;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.product-card .info .price{display:inline-block;margin-top:8px;padding:3px 8px;border-radius:12px;background:#f3efd4;color:var(--green);font-size:11px;font-weight:700}
 /* Modal */
 .modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:200;justify-content:center;align-items:center;padding:24px}
 .modal-overlay.active{display:flex}
@@ -156,7 +157,7 @@ footer span{color:var(--gold)}
 
 <section class="section" id="products">
   <h2>Our Products</h2>
-  <p class="sub">28 SKUs across 6 categories — all available for immediate order</p>
+  <p class="sub">28 SKUs across 6 categories — indicative FOB Ningbo prices in USD/pc, based on 500-3,000 pcs</p>
   <div class="products-grid" id="productGrid"></div>
 </section>
 
@@ -179,6 +180,7 @@ footer span{color:var(--gold)}
         <div class="spec"><div class="s-label">Material</div><div class="s-val" id="modalMat"></div></div>
         <div class="spec"><div class="s-label">Size</div><div class="s-val" id="modalSize"></div></div>
         <div class="spec"><div class="s-label">MOQ</div><div class="s-val" id="modalMOQ"></div></div>
+        <div class="spec"><div class="s-label">FOB Price Range</div><div class="s-val" id="modalPrice"></div></div>
         <div class="spec"><div class="s-label">FOB Port</div><div class="s-val">Ningbo / Shanghai</div></div>
       </div>
       <div class="m-gallery" id="modalGallery"></div>
@@ -247,6 +249,37 @@ const supplementGalleries = {
   "漏食洋葱TPR磨牙宠物玩具":["gallery/onion-blue.jpg","gallery/onion-orange.jpg"]
 };
 
+const catalogPrices = {
+  "毛绒小黄鸭耐咬磨牙解闷宠物玩具":"US$1.65-3.50/pc",
+  "毛绒小象耐咬磨牙解闷宠物玩具":"US$1.90-2.91/pc",
+  "毛绒狮子耐咬磨牙解闷宠物玩具":"US$1.90-2.91/pc",
+  "毛绒狼耐咬磨牙解闷宠物玩具":"US$1.90-2.91/pc",
+  "ETPU高回弹狗狗耐咬":"US$1.19-2.94/pc",
+  "TPR水波球狗玩具":"US$1.34-2.04/pc",
+  "披萨华夫饼耐咬磨牙洁齿狗狗啃咬玩具":"US$1.62-2.49/pc",
+  "搪胶仿真花生宠物狗玩具":"US$1.06-1.61/pc",
+  "橄榄TPR磨牙耐咬狗狗玩具":"US$1.24-1.89/pc",
+  "耐咬TPR发声橄榄球":"US$1.20-1.83/pc",
+  "辣椒漏食球TRP狗玩具":"US$1.52-2.32/pc",
+  "骨头形状橄榄TPR磨牙耐咬狗狗玩具":"US$1.19-1.80/pc",
+  "折叠狗盆户外喝水喂食碗":"US$1.03-2.43/pc",
+  "狗狗猫咪高脚护颈宠物碗":"US$1.82-2.78/pc",
+  "科学喂养防噎宠物慢食碗":"US$1.43-2.18/pc",
+  "防噎慢食碗":"US$1.23-1.86/pc",
+  "三球猫薄荷球猫咪玩具":"US$2.13-3.27/pc",
+  "墙角蹭痒器 挠痒痒猫抓板玩具":"US$0.92-1.47/pc",
+  "猫薄荷球猫咪玩具":"US$1.08-1.64/pc",
+  "双面开结梳":"US$1.29-2.14/pc",
+  "喷雾按摩梳蒸汽":"US$1.43-2.17/pc",
+  "开结去浮毛神器猫梳子":"US$1.45-2.22/pc",
+  "可降解拾便袋分配器":"US$1.45-2.35/pc",
+  "带拉链封口便携宠物零食袋":"US$1.17-2.04/pc",
+  "TPR狗狗耐咬磨牙带刺发声骨头":"US$1.27-1.94/pc",
+  "漏食洋葱TPR磨牙宠物玩具":"US$1.52-2.32/pc",
+  "除毛手套（普通款）":"US$1.17-1.78/pc",
+  "除毛手套（四指款）":"US$1.22-1.85/pc"
+};
+
 const grid = document.getElementById('productGrid');
 products.forEach((p,i) => {
   const card = document.createElement('div');
@@ -260,6 +293,7 @@ products.forEach((p,i) => {
       <h3>${p.en}</h3>
       <div class="cn">${p.cn}</div>
       <div class="desc">${p.desc}</div>
+      <div class="price">${catalogPrices[p.cn]}</div>
     </div>`;
   grid.appendChild(card);
 });
@@ -292,6 +326,7 @@ function openModal(i){
   document.getElementById('modalMat').textContent = p.mat;
   document.getElementById('modalSize').textContent = p.size;
   document.getElementById('modalMOQ').textContent = p.moq;
+  document.getElementById('modalPrice').textContent = catalogPrices[p.cn];
   modalImages = ['images/large/' + p.file, ...(supplementGalleries[p.cn] || []).map(file => 'images/' + file)];
   modalImageIndex = 0;
   const gallery = document.getElementById('modalGallery');
